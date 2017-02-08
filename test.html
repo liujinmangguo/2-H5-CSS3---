@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+	.div1{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		
+		width: 30vw;
+		height: 30vw;
+		background-color: #ccc;
+		text-align: center;
+		color: #db4567;	
+	}
+/*div::before, div::after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    background-color: #d60b30;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}*/
+	.div1::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		z-index: 10;
+
+		width: 30vw;
+		height: 30vw;
+		background-color: #d60b30;
+		opacity: 0.9;
+		border-radius: 50%;
+		-webkit-box-shadow: 0 0 10vw 10vw #d60b30;
+		        box-shadow: 0 0 10vw 10vw #d60b30;
+		animation: p1_lantern 0.5s infinite alternate;
+}
+@keyframes p1_lantern {
+	0%{
+		opacity: 0.5;
+		transform: scale(0.8,0.8);
+	}
+	100%{
+		opacity: 1;
+	}
+} 
+	.div2{
+		
+	}
+	</style>
+</head>
+<body>
+	<div class="div1">test1</div>
+	<div class="div2"></div>
+</body>
+</html>
